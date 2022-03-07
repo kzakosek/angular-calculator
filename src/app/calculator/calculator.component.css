@@ -3,11 +3,22 @@
   box-sizing: border-box;
 }
 
+input { 
+  text-align: center; 
+}
+
+.title{
+  color:white;
+  margin: 0 auto;
+}
+
 .mat-toolbar{
     background:#1565C0;
     text-align: center;
+    color:white;
 }
-  
+
+
 .column {
   float: left;
   width: 50%;

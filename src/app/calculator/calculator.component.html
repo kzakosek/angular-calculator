@@ -1,9 +1,9 @@
 <mat-toolbar>
-  <h3>Angular Calculator</h3>
+  <h3 class="title">Angular Calculator</h3>
 </mat-toolbar> 
 <mat-grid-list cols="1" rows="1" rowHeight="350px">
   <mat-grid-tile style="background: #1565C0;">
-      <mat-card style="text-align: center; background: #455A64;">
+      <mat-card style="text-align: center; background: #7a7a7a; color:white;">
         <form>
           <h2>{{ num1 }}</h2>
           <h2>+</h2>
@@ -11,7 +11,7 @@
           <mat-form-field appearance="fill">
             <input type="number" matInput placeholder="Result" #result >
           </mat-form-field> <br />
-          <button type="submit" mat-raised-button color="primary" (click)="onSubmit()">Check</button>
+          <button type="submit" mat-raised-button (click)="onSubmit()">Check</button>
         </form>
       </mat-card>
   </mat-grid-tile>
@@ -19,7 +19,7 @@
 <div class="row">
   <div class="column">
     <h3>Correct results</h3>
-    <table mat-table  [dataSource]="datasourceCorrect" class="mat-elevation-z8" style="margin: 0 auto; text-align:center; background: #455A64;">
+    <table mat-table  [dataSource]="datasourceCorrect" class="mat-elevation-z8" style="margin: 0 auto; text-align:center; background: #E0E0E0;">
       <ng-container matColumnDef = "answer">
           <th mat-header-cell *matHeaderCellDef>Equation</th>
           <td mat-cell *matCellDef = "let element"> {{element.answer}} </td>
@@ -30,7 +30,7 @@
   </div>
   <div class="column">
     <h3>Wrong results</h3>
-    <table mat-table  [dataSource]="datasourceWrong" class="mat-elevation-z8" style="margin: 0 auto; text-align:center; background: #455A64;">
+    <table mat-table  [dataSource]="datasourceWrong" class="mat-elevation-z8" style="margin: 0 auto; text-align:center; background: #E0E0E0;">
       <ng-container matColumnDef = "answer">
           <th mat-header-cell *matHeaderCellDef>Equation</th>
           <td mat-cell *matCellDef = "let element"> {{element.answer}} </td>
